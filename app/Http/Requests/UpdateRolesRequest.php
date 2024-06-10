@@ -25,6 +25,7 @@ class UpdateRolesRequest extends FormRequest
     {
         return [
             'roles_name' => 'required|string|max:255',
+            'name_thai' => 'required|string|max:255',
             'roles_code' => 'required|string|max:255',
             'description' => 'nullable|string',
         ];
@@ -41,6 +42,9 @@ class UpdateRolesRequest extends FormRequest
             'roles_name.required' => 'ชื่อจำเป็นต้องกรอก',
             'roles_name.string' => 'ชื่อต้องเป็นสตริง',
             'roles_name.max' => 'ชื่อต้องมีความยาวไม่เกิน 255 ตัวอักษร',
+            'name_thai.required' => 'ชื่อไทยจำเป็นต้องกรอก',
+            'name_thai.string' => 'ชื่อไทยต้องเป็นสตริง',
+            'name_thai.max' => 'ชื่อไทยต้องมีความยาวไม่เกิน 255 ตัวอักษร',
             'roles_code.required' => 'รหัสจำเป็นต้องกรอก',
             'roles_code.string' => 'รหัสต้องเป็นสตริง',
             'roles_code.max' => 'รหัสต้องมีความยาวไม่เกิน 255 ตัวอักษร',

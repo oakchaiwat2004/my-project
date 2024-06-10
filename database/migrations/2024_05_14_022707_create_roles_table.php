@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('roles_name')->nullable();
+            $table->string('name_thai')->nullable();
             $table->string('roles_code')->nullable();
             $table->text('description')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

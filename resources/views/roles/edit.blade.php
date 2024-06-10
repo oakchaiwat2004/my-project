@@ -44,6 +44,18 @@
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-4">
+                                        <label for="name_thai" class="block text-sm font-medium text-gray-700">
+                                            {{ __('Name Thai') }}
+                                        </label>
+                                        <input type="text" name="name_thai" id="name_thai"
+                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                            value="{{ $role->name_thai }}">
+                                        @error('name_thai')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-4">
                                         <label for="roles_code" class="block text-sm font-medium text-gray-700">
                                             {{ __('Role Code') }}
                                         </label>

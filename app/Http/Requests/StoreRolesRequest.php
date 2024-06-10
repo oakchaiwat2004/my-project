@@ -24,6 +24,7 @@ class StoreRolesRequest extends FormRequest
         return [
             //
             'roles_name' => 'required|string',
+            'name_thai' => 'required|string',
             'roles_code' => 'required|string',
             'description' => 'nullable|string',
         ];

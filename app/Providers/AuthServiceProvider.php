@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+
         'App\Models\User' => 'App\Policies\UserPolicy',
     ];
 
@@ -22,7 +22,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        
         $this->registerPolicies();
         Gate::before(function ($user,$ability){
             if($user->checkRoles('SADM')){

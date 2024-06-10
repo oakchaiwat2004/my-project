@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -11,13 +13,14 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
-        // if (Gate::allows("view",["SADM", User::class])){
-        //     $users = User::all();
-        //     return view('users.index',compact('users'));
-        // }else {
-        //     // show
-        // }
+
+        if (Gate::allows("view", ["SADM", User::class])) {
+            $users = User::all();
+            return view('users.index', compact('users'));
+        } else {
+            // แสดงข้อความแจ้งเตือน
+            return view('error-access');
+        }
     }
 
     /**
