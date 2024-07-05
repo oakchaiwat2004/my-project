@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Member;
+use App\Livewire\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Rules\Role;
@@ -79,5 +80,14 @@ Route::put('members/update',[
     \App\Http\Controllers\APIs\MembersController::class,
     'updatemApi'
 ])->name('member.update');
+
+
+Route::post(
+    '/fetchUsers',
+    [
+        User::class,
+        'fetchUsers'
+    ]
+)->name('apiSend.list');
 
 

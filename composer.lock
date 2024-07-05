@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d6ed44e7249352d819cd6756547aaf4",
+    "content-hash": "e2324f6e02ffda17139b3c2710936f8c",
     "packages": [
         {
             "name": "asdh/laravel-flatpickr",

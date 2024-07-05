@@ -166,7 +166,7 @@
                 // กำหนด header เพิ่มเติม
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader('Authorization',
-                        'Bearer qPdkY9CbnP9P3qflJsBYMxkKkXeeCJ7FoSy08fBR25bee2ae');
+                        'Bearer adOZgsuEHO3f2YQepi0ytLbdCcC31LQnkAaYyJ1G97e2a493');
                 }
             },
             columns: [{
